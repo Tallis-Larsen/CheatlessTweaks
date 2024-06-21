@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 
 # Mod Options
 project(CheatlessTweaks CXX ASM_NASM) 
-set(MOD_VERSION "0.1.0")
+set(MOD_VERSION "1.0.0")
 set(MOD_AUTHOR "Ethernal3")
 
 # Amethyst Minecraft Folder
