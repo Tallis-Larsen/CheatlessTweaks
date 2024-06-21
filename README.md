@@ -1,5 +1,5 @@
 # CheatlessTweaks `v1.0.0`
-* Supports Minecraft version `1.21.0.3` using AmethystRuntime `N/A`
+* Supports Minecraft version `1.21.0.3` using AmethystRuntime `v1.3.0`
 * Simply allows you to change the `mobGriefing` and `playersSleepingPercentage` gamerules without turning on cheats and without disabling achievements.
 * You must make the changes with the `/gamerule` command, as there is no GUI option yet.
 * You still have to be an operator to use the command
