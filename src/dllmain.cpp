@@ -6,9 +6,9 @@ SafetyInlineHook _GameRules__registerRules;
 
 void GameRules_registerRules(GameRules* self) {
   _GameRules__registerRules.call<void>(self);
-  for (int i = 0; i < self->gamerules.size(); i++) {
-    if (self->gamerules[i].name == "mobGriefing" || self->gamerules[i].name == "playersSleepingPercentage")
-      self->gamerules[i].requiresCheats = false;
+  for (int i = 0; i < self->mGamerules.size(); i++) {
+    if (self->mGamerules[i].mName == "mobGriefing" || self->mGamerules[i].mName == "playersSleepingPercentage")
+      self->mGamerules[i].mRequiresCheats = false;
   }
 }
 
