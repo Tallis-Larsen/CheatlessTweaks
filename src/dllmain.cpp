@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#include <array>
+#include <iostream>
 #include "dllmain.hpp"
 #include "minecraft/src/common/world/level/storage/GameRules.hpp"
 
@@ -6,10 +7,16 @@ SafetyInlineHook _GameRules__registerRules;
 
 void GameRules_registerRules(GameRules* self) {
   _GameRules__registerRules.call<void>(self);
-  for (int i = 0; i < self->mGamerules.size(); i++) {
-    if (self->mGamerules[i].mName == "mobGriefing" || self->mGamerules[i].mName == "playersSleepingPercentage")
-      self->mGamerules[i].mRequiresCheats = false;
+
+  std::array<GameRulesIndex, 3> noCheatRules = {
+    GameRulesIndex::MobGriefing,
+    GameRulesIndex::PlayersSleepingPercentage,
+    GameRulesIndex::DoWeatherCycle };
+
+  for (int i = 0; i < noCheatRules.size(); i++) {
+    self->mGamerules[noCheatRules[i]].mRequiresCheats = false;
   }
+
 }
 
 ModFunction void Initialize(AmethystContext* ctx) {

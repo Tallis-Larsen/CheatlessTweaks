@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.12)
 
 # Mod Options
 project(CheatlessTweaks CXX ASM_NASM) 
-set(MOD_VERSION "1.0.0")
+set(MOD_VERSION "1.1.0")
 set(MOD_AUTHOR "Ethernal3")
 
 # Amethyst Minecraft Folder
-set(AmethystFolder "$ENV{localappdata}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/AC/Amethyst/")
+set(AmethystFolder "$ENV{localappdata}/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/amethyst")
 
 # Configure to build within the Amethyst Folder
 configure_file(mod.json.in "${AmethystFolder}/mods/${PROJECT_NAME}@${MOD_VERSION}/mod.json" @ONLY)
